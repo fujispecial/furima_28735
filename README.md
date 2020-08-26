@@ -27,14 +27,16 @@ Things you may want to cover:
 
 ## userテーブル
 
-| Column         | Type    | Options           |
-| -------------- | ------- | ----------------- |
-| nickname       | string  | null: false       |
-| email          | string  | null: false       |
-| password       | string  | null: false       |
-| family_name    | string  | null: false       |
-| first_name     | string  | null: false       |
-| birth_date     | date    | null: false       |
+| Column           | Type    | Options           |
+| ---------------- | ------- | ----------------- |
+| nickname         | string  | null: false       |
+| email            | string  | null: false       |
+| password         | string  | null: false       |
+| family_name      | string  | null: false       |
+| first_name       | string  | null: false       |
+| family_name_ruby | string  | null: false       |
+| first_name_ruby  | string  | null: false       |
+| birth_date       | date    | null: false       |
 
 ### Association
 
@@ -46,15 +48,15 @@ Things you may want to cover:
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
-| item_image     | string     | null: false                    |
-| item_name      | string     | null: false                    |
-| description    | string     | null: false                    |
+| image     　　　| string     | null: false                    |
+| name　　　      | string     | null: false                    |
+| description    | text       | null: false                    |
 | category_id    | integer    | null: false                    |
 | status_id      | integer    | null: false                    |
 | postage_id     | integer    | null: false                    |
 | prefectures_id | integer    | null: false                    |
 | days_id        | integer    | null: false                    |
-| price          | string     | null: false                    |
+| price          | integer    | null: false                    |
 | user_id        | integer    | null: false, foreign_key: true |
 
 ### Association
