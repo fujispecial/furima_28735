@@ -34,17 +34,13 @@ Things you may want to cover:
 | password       | string  | null: false       |
 | family_name    | string  | null: false       |
 | first_name     | string  | null: false       |
-| birth_year_id  | integer | null: false       |
-| birth_month_id | integer | null: false       |
-| birth_day_id   | integer | null: false       |
+| birth_date     | date    | null: false       |
 
 ### Association
 
 - has_many: items
 - has_many: buyers
-- belongs_to_active_hash: birth_year
-- belongs_to_active_hash: birth_month
-- belongs_to_active_hash: birth_day
+
 
 ## itemsテーブル
 
@@ -59,12 +55,12 @@ Things you may want to cover:
 | prefectures_id | integer    | null: false                    |
 | days_id        | integer    | null: false                    |
 | price          | string     | null: false                    |
-| user_id        | references | null: false, foreign_key: true |
+| user_id        | integer    | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to: users
-- has_one: buyers
+- belongs_to: user
+- has_one: buyer
 - belongs_to_active_hash: category
 - belongs_to_active_hash: status
 - belongs_to_active_hash: postage
@@ -75,17 +71,13 @@ Things you may want to cover:
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| user_id          | references | null: false, foreign_key: true |
-| item_id          | references | null: false, foreign_key: true |
-| card_number      | string     | null: false                    |
-| expiration_month | string     | null: false                    |
-| expiration_year  | string     | null: false                    |
-| security_code    | string     | null: false                    |
+| user_id          | integer    | null: false, foreign_key: true |
+| item_id          | integer    | null: false, foreign_key: true |
 
 ### Association
 - belongs_to: user
-- belongs_to: items
-- has_one: addresses
+- belongs_to: item
+- has_one: address
 
 ## addressesテーブル
 
@@ -97,7 +89,7 @@ Things you may want to cover:
 | address          | string     | null: false                    |
 | building         | string     |                                |
 | tel              | string     | null: false                    |
-| buyer_id         | references | null: false, foreign_key: true |
+| buyer_id         | integer    | null: false, foreign_key: true |
 
 ### Association
 - belongs_to: buyer
