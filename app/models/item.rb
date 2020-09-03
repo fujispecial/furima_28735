@@ -19,6 +19,6 @@ class Item < ApplicationRecord
   validates :category_id, numericality: { other_than: 1, message: "select" } 
   validates :status_id, numericality: { other_than: 1, message: "select" }
   validates :postage_id, numericality: { other_than: 1, message: "select" }
-  validates :prefectures_id, numericality: { other_than: 1, message: "select" }
-  validates :days_id, numericality: { other_than: 1, message: "select" }
+  validates :prefecture_id, numericality: { other_than: 1, message: "select" }
+  validates :day_id, numericality: { other_than: 1, message: "select" }
 end

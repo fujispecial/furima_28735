@@ -54,8 +54,8 @@ Things you may want to cover:
 | category_id    | integer    | null: false                    |
 | status_id      | integer    | null: false                    |
 | postage_id     | integer    | null: false                    |
-| prefectures_id | integer    | null: false                    |
-| days_id        | integer    | null: false                    |
+| prefecture_id  | integer    | null: false                    |
+| day_id         | integer    | null: false                    |
 | price          | integer    | null: false                    |
 | user_id        | integer    | null: false, foreign_key: true |
 
