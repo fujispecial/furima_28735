@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2020_09_02_031748) do
     t.integer "category_id"
     t.integer "status_id"
     t.integer "postage_id"
-    t.integer "prefectures_id"
-    t.integer "days_id"
+    t.integer "prefecture_id"
+    t.integer "day_id"
     t.integer "price"
     t.integer "user_id"
   end
