@@ -69,6 +69,7 @@ Things you may want to cover:
 - belongs_to_active_hash: prefectures
 - belongs_to_active_hash: days
 
+
 ## buyersテーブル
 
 | Column           | Type       | Options                        |
