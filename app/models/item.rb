@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :day
   has_one_attached :image
-  has_many :orders
+  has_one :order
 
   with_options presence: true do
     validates :image
