@@ -10,6 +10,10 @@ RSpec.describe OrderAddress, type: :model do
       it "全ての情報が存在すれば購入できる" do
         expect(@order_address).to be_valid
       end
+      it "buildingが空でも購入できる" do
+        @order_address.building = nil
+        expect(@order_address).to be_valid
+      end
     end
 
     context "購入できない" do
